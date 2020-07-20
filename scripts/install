@@ -110,6 +110,18 @@ case $(uname -m) in
     *) ynh_die "Unknown arch" ;;
 esac
 
+# Download, check integrity, uncompress and patch the source from jellyfin-server-[arch].src
+case $(uname -m) in
+    x86_64) ynh_setup_source "$final_path" "jellyfin-server-amd64" ;;
+    *) ynh_die "Unknown arch" ;;
+esac
+
+# Download, check integrity, uncompress and patch the source from jellyfin-web-[arch].src
+case $(uname -m) in
+    x86_64) ynh_setup_source "$final_path" "jellyfin-web-amd64" ;;
+    *) ynh_die "Unknown arch" ;;
+esac
+
 # Download, check integrity, uncompress and patch the source from jellyfin-[arch].src
 case $(uname -m) in
     x86_64) ynh_setup_source "$final_path" "jellyfin-amd64" ;;
@@ -126,6 +138,8 @@ esac
 #==============================================
 
 dpkg --install "$final_path"/jellyfin-ffmpeg.deb
+dpkg --install "$final_path"/jellyfin-server.deb
+dpkg --install "$final_path"/jellyfin-web.deb
 dpkg --install "$final_path"/jellyfin.deb
 rm "$final_path"/*.deb
 
