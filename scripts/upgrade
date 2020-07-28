@@ -52,6 +52,8 @@ esac
 #==============================================
 
 dpkg --install "$final_path"/jellyfin-ffmpeg.deb
+dpkg --install "$final_path"/jellyfin-server.deb
+dpkg --install "$final_path"/jellyfin-web.deb
 dpkg --install "$final_path"/jellyfin.deb
 rm "$final_path"/*.deb
 
