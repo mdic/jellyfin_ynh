@@ -1,7 +1,7 @@
 # Jellyfin app for YunoHost
 Jellyfin Server
 
-**Shipped version:** 10.5.5
+**Shipped version:** 10.6.1
 
 - [Yunohost project](https://yunohost.org)
 - [Jellyfin website](https://github.com/jellyfin/jellyfin)
@@ -11,6 +11,9 @@ Jellyfin Server
 
 [![Install Jellyfin with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=jellyfin)
 
+
+### Note
+This is only configured for amd64 architecture!
 
 ### Installing guide
 

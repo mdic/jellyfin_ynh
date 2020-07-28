@@ -1,5 +1,5 @@
-SOURCE_URL=https://repo.jellyfin.org/releases/server/debian/versions/stable/meta/10.6.0/jellyfin_10.6.0-2_all.deb
-SOURCE_SUM=9a11adf0c12328ba68dd0b879e03ac7ba6dbe632bd404466023fcd060ee6536408716a0da4d3ce7bf038054f05f9d83f39216ac73f1e6e0dc1d78a3e9b2e1896
+SOURCE_URL=https://repo.jellyfin.org/releases/server/debian/versions/stable/meta/10.6.1/jellyfin_10.6.1-1_all.deb
+SOURCE_SUM=058dfbc8f23e0f5d5020dc84c5fc344c78f3a1cd1d3b8867bf49baa0b3cff3930b84273787b2072a7a5d9890847f5d46656e895a35a3714e6809c5211f7eed42
 SOURCE_SUM_PRG=sha512sum
 SOURCE_FORMAT=deb
 SOURCE_IN_SUBDIR=false
