@@ -30,20 +30,26 @@ esac
 # Download, check integrity, uncompress and patch the source from jellyfin-server-[arch].src
 case $(uname -m) in
     x86_64) ynh_setup_source "$final_path" "jellyfin-server-amd64" ;;
+    aarch64) ynh_setup_source "$final_path" "jellyfin-server-arm64" ;;
+    armv7l) ynh_setup_source "$final_path" "jellyfin-server-armhf" ;;
     *) ynh_die "Unknown arch" ;;
 esac
 
-# Download, check integrity, uncompress and patch the source from jellyfin-web-[arch].src
+# Download, check integrity, uncompress and patch the source from jellyfin-web-all.src
+# The package is architecture-independent, so it always installs the same package
 case $(uname -m) in
-    x86_64) ynh_setup_source "$final_path" "jellyfin-web-amd64" ;;
+    x86_64) ynh_setup_source "$final_path" "jellyfin-web-all" ;;
+    aarch64) ynh_setup_source "$final_path" "jellyfin-web-all" ;;
+    armv7l) ynh_setup_source "$final_path" "jellyfin-web-all" ;;
     *) ynh_die "Unknown arch" ;;
 esac
 
-# Download, check integrity, uncompress and patch the source from jellyfin-[arch].src
+# Download, check integrity, uncompress and patch the source from jellyfin-all.src
+# The package is architecture-independent, so it always installs the same package
 case $(uname -m) in
-    x86_64) ynh_setup_source "$final_path" "jellyfin-amd64" ;;
-    aarch64) ynh_setup_source "$final_path" "jellyfin-arm64" ;;
-    armv7l) ynh_setup_source "$final_path" "jellyfin-armhf" ;;
+    x86_64) ynh_setup_source "$final_path" "jellyfin-all" ;;
+    aarch64) ynh_setup_source "$final_path" "jellyfin-all" ;;
+    armv7l) ynh_setup_source "$final_path" "jellyfin-all" ;;
     *) ynh_die "Unknown arch" ;;
 esac
 
